@@ -9,11 +9,11 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="container flex items-center justify-between h-20 px-4 mx-auto bg-black md:px-8">
+        <header className="flex items-center justify-between h-20 px-4 bg-black border-b border-gray-200 md:px-8">
           <Logo />
           <FavsCount />
         </header>
-        {children}
+        <main className="px-4 my-8 bg-white md:px-8">{children}</main>
       </body>
     </html>
   )
