@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import { FavsCount } from 'components'
 import { Logo } from 'icons'
@@ -10,10 +11,12 @@ const RootLayout = ({ children }) => {
     <html lang="en">
       <body className={inter.className}>
         <header className="flex items-center justify-between h-20 px-4 bg-black border-b border-gray-200 md:px-8">
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
           <FavsCount />
         </header>
-        <main className="px-4 my-8 bg-white md:px-8">{children}</main>
+        <main className="bg-white ">{children}</main>
       </body>
     </html>
   )

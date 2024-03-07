@@ -1,3 +1,6 @@
+export { default as CharacterCard } from './CharacterCard'
+export { default as CharacterHero } from './CharacterHero'
+export { default as CharactersList } from './CharactersList'
 export { default as FavsCount } from './FavsCount'
 export { default as ResultsCount } from './ResultsCount'
 export { default as SearchBox } from './SearchBox'
