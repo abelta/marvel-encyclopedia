@@ -1,6 +1,6 @@
-import { HeartEmpty } from 'icons'
+import { FavButton } from 'components'
 
-const CharacterCard = ({ name, thumbnail }) => {
+const CharacterCard = ({ name, id, thumbnail }) => {
   return (
     <article
       className="flex flex-col justify-between cut-corner"
@@ -15,12 +15,13 @@ const CharacterCard = ({ name, thumbnail }) => {
         <span className="absolute overflow-hidden text-white w-28 whitespace-nowrap overflow-ellipsis left-4">
           {name}
         </span>
-        <HeartEmpty
-          className="absolute right-2"
+        <FavButton
+          className="absolute right-0"
           style={{
             height: '25%',
             width: '25%',
           }}
+          characterId={id}
         />
       </div>
     </article>
