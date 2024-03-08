@@ -1,4 +1,5 @@
-import { FavButton } from 'components'
+import dynamic from 'next/dynamic'
+const FavButton = dynamic(() => import('components/FavButton'), { ssr: false })
 
 const CharacterCard = ({ name, id, thumbnail }) => {
   return (

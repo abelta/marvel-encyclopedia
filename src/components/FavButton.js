@@ -5,7 +5,7 @@ import { useFavs } from 'hooks'
 
 const FavButton = ({ characterId, style, className }) => {
   const [favs, setFavs] = useFavs()
-  console.log('FAVS', favs)
+
   return (
     <button
       className={className}
