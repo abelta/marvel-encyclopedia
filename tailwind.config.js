@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      scrollbar: ['dark'],
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -14,8 +15,8 @@ module.exports = {
       },
     },
   },
-
   plugins: [
+    require('tailwind-scrollbar'),
     function ({ addUtilities }) {
       const newUtilities = {
         '.cut-corner': {

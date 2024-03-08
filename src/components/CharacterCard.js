@@ -11,7 +11,7 @@ const CharacterCard = ({ name, thumbnail }) => {
         backgroundSize: 'cover',
       }}
     >
-      <div class="relative h-14 border-t-4 border-red-500  bg-black w-full flex flex-row items-center px-4 justify-around mt-auto">
+      <div className="relative flex flex-row items-center justify-around w-full px-4 mt-auto bg-black border-t-4 border-red-500 h-14">
         <span className="absolute overflow-hidden text-white w-28 whitespace-nowrap overflow-ellipsis left-4">
           {name}
         </span>

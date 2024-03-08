@@ -9,14 +9,14 @@ const CharacterHero = ({ description, name, thumbnail }) => (
         alt={name}
         height="850"
         width="850"
-        className="object-cover w-full h-96 lg:w-80 lg:h-full"
+        className="object-cover w-full h-auto md:w-80 md:h-full"
       />
-      <div className="flex flex-col gap-8 px-4 py-6">
-        <div className="flex flex-row items-center justify-between">
+      <div className="flex flex-col w-full gap-8 px-4 py-6">
+        <div className="flex flex-row items-center justify-between w-full">
           <h2 className="text-4xl font-bold text-white uppercase">{name}</h2>
           <HeartEmpty />
         </div>
-        <p className="text-white  lg:mt-0">{description}</p>
+        <p className="text-white lg:mt-0">{description}</p>
       </div>
     </div>
   </div>
