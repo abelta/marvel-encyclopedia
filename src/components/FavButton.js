@@ -4,7 +4,7 @@ import { HeartEmpty, HeartFull } from 'icons'
 import { useFavs } from 'hooks'
 
 const FavButton = ({ characterId, style, className }) => {
-  const [favs, setFavs] = useFavs()
+  const { favs, add, remove } = useFavs()
 
   return (
     <button
@@ -12,11 +12,11 @@ const FavButton = ({ characterId, style, className }) => {
       style={style}
       onClick={event => {
         event.preventDefault()
-        setFavs(
-          favs.includes(characterId.toString())
-            ? favs.filter(f => f.toString() !== characterId.toString())
-            : [...favs, characterId.toString()],
-        )
+        if (favs.includes(characterId.toString())) {
+          remove(characterId.toString())
+        } else {
+          add(characterId.toString())
+        }
       }}
     >
       {favs.includes(characterId.toString()) ? (

@@ -1,17 +1,15 @@
-import { useEffect, useState } from 'react'
+import { create } from 'zustand'
+import { persist, createJSONStorage } from 'zustand/middleware'
 
-const useFavs = () => {
-  const [favs, setFavs] = useState(() => {
-    if (typeof window === 'undefined') return []
-    return JSON.parse(localStorage.getItem('favs') || '[]')
-  })
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    localStorage.setItem('favs', JSON.stringify(favs))
-  }, [favs])
-
-  return [favs, setFavs]
-}
+const useFavs = create(
+  persist(
+    (set, get) => ({
+      favs: [],
+      add: id => set({ favs: [...get().favs, id] }),
+      remove: id => set({ favs: get().favs.filter(f => f !== id) }),
+    }),
+    { name: 'favs', storage: createJSONStorage(() => localStorage) },
+  ),
+)
 
 export default useFavs

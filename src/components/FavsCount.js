@@ -4,7 +4,7 @@ import { HeartFull } from 'icons'
 import { useFavs } from 'hooks'
 
 const FavsCount = () => {
-  const [favs] = useFavs()
+  const { favs } = useFavs()
 
   return (
     <div className="flex items-center">
