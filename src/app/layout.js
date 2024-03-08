@@ -1,9 +1,11 @@
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
-import { FavsCount } from 'components'
+// import { FavsCount } from 'components'
 import { Logo } from 'icons'
 import './globals.css'
 
+const FavsCount = dynamic(() => import('components/FavsCount'), { ssr: false })
 const inter = Inter({ subsets: ['latin'] })
 
 const RootLayout = ({ children }) => {
