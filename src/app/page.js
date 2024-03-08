@@ -14,10 +14,7 @@ const Home = async () => {
     <div className="flex flex-col items-center min-h-screen p-24 space-y-4">
       <SearchBox />
       <ResultsCount count={characters.length} />
-      <CharactersList
-        characters={characters}
-        linkTo={({ id }) => `/character/${id}`}
-      />
+      <CharactersList characters={characters} />
     </div>
   )
 }

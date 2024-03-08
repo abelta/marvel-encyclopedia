@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
-// import { FavsCount } from 'components'
 import { Logo } from 'icons'
 import './globals.css'
 
