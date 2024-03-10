@@ -1,11 +1,8 @@
-import getConfig from 'next/config'
 import md5 from 'md5'
 
-const { publicRuntimeConfig } = getConfig()
-
 const marvelHash = ts => {
-  const publicKey = publicRuntimeConfig.marvelApi.publicKey
-  const privateKey = publicRuntimeConfig.marvelApi.privateKey
+  const publicKey = process.env.NEXT_PUBLIC_MARVEL_PUBLIC_KEY
+  const privateKey = process.env.NEXT_PUBLIC_MARVEL_PRIVATE_KEY
   return md5(`${ts}${privateKey}${publicKey}`)
 }
 

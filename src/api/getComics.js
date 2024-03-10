@@ -1,18 +1,15 @@
-import getConfig from 'next/config'
 import { marvelHash } from 'helpers'
-
-const { publicRuntimeConfig } = getConfig()
 
 const getComics = ({ characterId }) => {
   const ts = new Date().getTime()
   const limit = 50
 
   const url = new URL(
-    `${publicRuntimeConfig.marvelApi.baseUrl}/characters/${characterId}/comics`,
+    `${process.env.NEXT_PUBLIC_MARVEL_URL}/characters/${characterId}/comics`,
   )
   const params = new URLSearchParams({
     ts,
-    apikey: publicRuntimeConfig.marvelApi.publicKey,
+    apikey: process.env.NEXT_PUBLIC_MARVEL_PUBLIC_KEY,
     hash: marvelHash(ts),
     limit,
   })

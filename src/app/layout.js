@@ -7,6 +7,10 @@ import './globals.css'
 const FavsCount = dynamic(() => import('components/FavsCount'), { ssr: false })
 const inter = Inter({ subsets: ['latin'] })
 
+const metadata = {
+  title: 'Marvel Encyclopedia',
+}
+
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
@@ -23,4 +27,5 @@ const RootLayout = ({ children }) => {
   )
 }
 
+export { metadata }
 export default RootLayout
