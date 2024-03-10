@@ -1,4 +1,4 @@
-import { getCharacter, getComics } from 'api'
+import { getCharacter, getCharacters, getComics } from 'api'
 import { CharacterHero, ComicsList } from 'components'
 
 const Page = async ({ params: { id } }) => {
@@ -25,4 +25,15 @@ const Page = async ({ params: { id } }) => {
   )
 }
 
+const generateStaticParams = async () => {
+  const {
+    data: { results: characters },
+  } = await getCharacters()
+
+  return characters.map(({ id }) => ({
+    params: { id },
+  }))
+}
+
+export { generateStaticParams }
 export default Page
