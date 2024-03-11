@@ -9,6 +9,7 @@ const SearchBox = ({ onKeyUp }) => {
         placeholder="SEARCH A CHARACTER"
         className="w-full h-3 uppercase text-l focus:outline-none"
         onKeyUp={event => onKeyUp(event.currentTarget.value)}
+        data-testid="search-box"
       />
     </div>
   )

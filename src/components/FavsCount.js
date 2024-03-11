@@ -8,9 +8,15 @@ const FavsCount = () => {
   const { favsFilter, toggleFavsFilter } = useUI()
 
   return (
-    <button className="flex items-center" onClick={toggleFavsFilter}>
+    <button
+      className="flex items-center"
+      onClick={toggleFavsFilter}
+      data-testid="favs-filter"
+    >
       {favsFilter ? <HeartFull /> : <HeartEmpty />}
-      <span className="ml-2 text-white">{favs.length}</span>
+      <span className="ml-2 text-white" data-testid="favorites-counter">
+        {favs.length}
+      </span>
     </button>
   )
 }

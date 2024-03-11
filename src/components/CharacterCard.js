@@ -11,6 +11,7 @@ const CharacterCard = ({ name, id, thumbnail }) => {
         backgroundImage: `url(${thumbnail.path}.${thumbnail.extension})`,
         backgroundSize: 'cover',
       }}
+      data-testid="character-card"
     >
       <div className="relative flex flex-row items-center justify-around w-full px-4 mt-auto bg-black border-t-4 border-red-500 h-14">
         <span className="absolute overflow-hidden text-white w-28 whitespace-nowrap overflow-ellipsis left-4">

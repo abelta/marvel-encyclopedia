@@ -18,6 +18,7 @@ const FavButton = ({ characterId, style, className }) => {
           add(characterId.toString())
         }
       }}
+      data-testid="fav-button"
     >
       {favs.includes(characterId.toString()) ? (
         <HeartFull className="w-full h-full" />
