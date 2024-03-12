@@ -4,16 +4,25 @@ This project is a submission for the Zara Coding Challenge.
 It uses Marvel's API to showcase an organized array of characters and the comics they feature in.
 It also provides the chance to search by name, keep favorites and filter by said favorites.
 
+![Home](./readmeassets/screenshot-home.png)
+
+![Detail](./readmeassets/screenshot-detail.png)
+
 ## Tech stack
 * React 18
 * Next JS 14 (using app router)
 * Tailwind
 * Zustand
 * **NODE 21 recommended**
+
+## Responsive
+Responsive design contemplating mobile, tablet and desktop screens.
+
 ## SSR strategy
 Home page turned out to be too dynamimc to consider for SSR (at least on this first iteration.)
 
 Detail page uses SSR to pregenerate pages for the first 50 results (could potentially be adjusted to more.)
+
 ## To run
 Install dependencies first:
 ````
